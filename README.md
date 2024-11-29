@@ -1,6 +1,11 @@
 # LangChain RAG Project
 
-This project demonstrates how to build a **Retrieval-Augmented Generation (RAG)** system using **LangChain** and **OpenAI GPT**. The system retrieves relevant documents and generates context-aware responses based on those documents.
+This project demonstrates how to build a **Retrieval-Augmented Generation (RAG)** system using **LangChain** and **OpenAI GPT**. The RAG system combines the power of **language models** with **document retrieval** to create a more accurate and context-aware response generation process. It allows you to query a database of documents, retrieve relevant information, and generate responses based on that information.
+
+### Key Features:
+- **Document Embedding**: Converts documents into embeddings using OpenAI's GPT models.
+- **Vector Search**: Uses **Chroma** to store and search document embeddings efficiently.
+- **Generative Model**: Utilizes OpenAI GPT to generate text based on the retrieved documents.
 
 ## Installation (Windows)
 
