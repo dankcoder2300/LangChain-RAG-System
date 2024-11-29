@@ -1,20 +1,19 @@
-# Langchain RAG Tutorial
+# LangChain RAG Project
 
-## Install dependencies
+This project demonstrates how to build a **Retrieval-Augmented Generation (RAG)** system using **LangChain** and **OpenAI GPT**. The system retrieves relevant documents and generates context-aware responses based on those documents.
 
-1. Do the following before installing the dependencies found in `requirements.txt` file because of current challenges installing `onnxruntime` through `pip install onnxruntime`. 
+## Installation (Windows)
 
-    - For MacOS users, a workaround is to first install `onnxruntime` dependency for `chromadb` using:
+### 1. Install System Dependencies
 
-    ```python
-     conda install onnxruntime -c conda-forge
-    ```
-    See this [thread](https://github.com/microsoft/onnxruntime/issues/11037) for additonal help if needed. 
+- **Microsoft C++ Build Tools**: Install from [here](https://github.com/bycloudai/InstallVSBuildToolsWindows?tab=readme-ov-file).
+- **onnxruntime**: Install the `onnxruntime` dependency (required by `chromadb`):
 
-     - For Windows users, follow the guide [here](https://github.com/bycloudai/InstallVSBuildToolsWindows?tab=readme-ov-file) to install the Microsoft C++ Build Tools. Be sure to follow through to the last step to set the enviroment variable path.
+  ```bash
+  pip install onnxruntime
 
 
-2. Now run this command to install dependenies in the `requirements.txt` file. 
+2. Install Python Dependencies
 
 ```python
 pip install -r requirements.txt
@@ -26,7 +25,7 @@ pip install -r requirements.txt
 pip install "unstructured[md]"
 ```
 
-## Create database
+4. Create database
 
 Create the Chroma DB.
 
@@ -34,7 +33,7 @@ Create the Chroma DB.
 python create_database.py
 ```
 
-## Query the database
+5. Query the database
 
 Query the Chroma DB.
 
@@ -42,6 +41,8 @@ Query the Chroma DB.
 python query_data.py "How does Alice meet the Mad Hatter?"
 ```
 
-> You'll also need to set up an OpenAI account (and set the OpenAI key in your environment variable) for this to work.
+Make sure to set your OpenAI API key as an environment variable:
 
-Here is a step-by-step tutorial video: [RAG+Langchain Python Project: Easy AI/Chat For Your Docs](https://www.youtube.com/watch?v=tcqEUSNCn8I&ab_channel=pixegami).
+```bash
+set OPENAI_API_KEY="your-openai-api-key"
+```
